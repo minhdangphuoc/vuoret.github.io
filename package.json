@@ -1,0 +1,22 @@
+{
+  "name": "course_assignment",
+  "version": "1.0.0",
+  "description": "For beginner web course assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "dev": "babel-node src/index.js"
+  },
+  "author": "Minh Dang",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
