@@ -1,5 +1,5 @@
 const header = ["Order","Date","Time","Type","Value"];
-const method_array = ["light","temperature","rain","wind_speed","wind_direction","humidity_in","humidity_out"]
+const method_array = ["vuoret_temperature","vuoret_wind_speed"]
 const color = "#ffffff";
 Chart.defaults.global.defaultFontColor = "#fff";
 function min_max_bar(min,max,value){
@@ -28,6 +28,14 @@ function row_tag(x){
 function reset() {
 	var elements = document.getElementsByClassName('row'); // get all elements
 	for(var i = 0; i < elements.length; i++){
-		elements[i].style.backgroundColor = "#fff";
+		elements[i].style.backgroundColor = "rgb(255, 255, 255)";
 	}
 }
+
+function show_help(){
+    let txt = "";
+    txt += '<img class = "tuto" src="./style/image/Tuto.svg" alt="logo"></img>'
+    document.getElementById("table").innerHTML = txt;
+}
+
+show_help();

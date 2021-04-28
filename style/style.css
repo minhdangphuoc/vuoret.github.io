@@ -5,13 +5,16 @@ body{
     background: rgb(24, 32, 57);
     color: #fff;
     font-size: 1.5vw;
-
+    
 }
 div{
     font-family: 'Nunito', sans-serif;
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-keyframes:fadeIn 0.5s;
 }
 .bar_container{
-    --margin: 29.5vw;
+    --margin: 28.5vw;
     min-width: 28vw;
     margin-left: calc(50% - var(--margin));
     padding-top: 0vw;
@@ -20,19 +23,37 @@ div{
     margin-bottom: 2vw;
 }
 
+#title_bar{
+    padding-left: 1.5vw;
+}
+
 .topbar{
     float: left;
-    height: 3vw;
-    padding: 0.5vw 1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
     width: auto;
+}
+#table{
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-keyframes:fadeIn 0.5s;
+}
+.tuto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-keyframes:fadeIn 1s;
 }
 
 .image{
     position: absolute;
     width: auto;
     height: 3vw;
-    left: 24px;
-    top: 24px;
+    left: 2vw;
+    top: 1.5vw;
 }
 
 .type{
@@ -49,9 +70,10 @@ div{
     padding-bottom: 2vw;
     left: 0px;
     top: 0px;
-    margin-top: 1vw;
+    margin-top: 2vw;
     margin-bottom: 1vw;
-    margin-left: calc(50% - (var(--width)/2 + 2.5vw));
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 24px;
     position: static;
 }
@@ -63,6 +85,9 @@ table, tr, td{
     padding-bottom: 1vw;
     font-weight:bold;
     margin: 0px 0px;
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-keyframes:fadeIn 0.5s;
 }
 
 .row{
@@ -70,15 +95,16 @@ table, tr, td{
 }
 
 .bt{
-    --margin: 18.5vw;
+    --margin: 10vw;
     margin-left: calc(50% - var(--margin));
 }
 
 
 table {
-    
     height: auto;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
 tr{

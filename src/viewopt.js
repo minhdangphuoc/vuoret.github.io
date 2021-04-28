@@ -2,11 +2,11 @@
 function new_type_button(method,time){
     txt = ""
     txt += "<button style =\"opacity:0.9; background-color:#FFFFFF; color:#3E64FF \">"
-    txt += method
+    txt += method.toString().slice(7,method.toString().length)
     txt += "</button>"
     txt += "<div class=\"dropdown-content\">"
     for (x in method_array){
-        txt += "<a href=\"#\" onclick = \"list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather',\'" + method_array[x].toString() + "\','" + time.toString() + "')\">" + method_array[x].toString() + "</a>"
+        txt += "<a href=\"#\" onclick = \"list_4('http://bweb17.course.tamk.cloud/api/get',\'" + method_array[x].toString() + "\','" + time.toString() + "')\">" + method_array[x].toString().slice(7,method_array[x].toString().length) + "</a>"
     }
     txt += "</div>"
     document.getElementById("type").innerHTML = txt;
@@ -15,11 +15,21 @@ function new_type_button(method,time){
 function list_4(ADDRESS,method,time){
     //alert("clicked");
     var txt = "";
+    let type;
+    switch (method){
+        case "vuoret_wind_speed": 
+            type = "wind_speed";
+            break;
+
+        case "vuoret_temperature":
+            type = "temperature";
+            break;
+    }
     const xhr = new XMLHttpRequest();
     if(time == '0'){
         xhr.open("GET", ADDRESS);
     } else {
-        xhr.open("GET", (ADDRESS+'/'+method+'/'+time).toString());
+        xhr.open("GET", (ADDRESS+'/'+type+'/'+time).toString());
     }
     const DONE = 4;
     const SUCCESS = 200;
@@ -158,7 +168,6 @@ function list_4(ADDRESS,method,time){
                             ticks: {
                                 fontColor: "#fff",
                                 fontStyle: "bold",
-                                suggestedMax:100,
                                 beginAtZero: true,
                                 maxTicksLimit: 5,
                                 padding: 20
