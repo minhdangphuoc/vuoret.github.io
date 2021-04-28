@@ -4,7 +4,7 @@
 .seekbar{
     margin: 0;
     padding: 0;
-    width: 35vw;
+    width: 32vw;
     height: 0.8vw;
     border: 0.2vw solid #fff;
     background: rgb(0,212,255);
@@ -16,6 +16,7 @@
 }
 .valuetext{
     float: left;
+    font-size: 1.5vw;
     padding-bottom: 0.5vw;
     padding-top: 0.5vw;
     margin-bottom: 0.5vw;

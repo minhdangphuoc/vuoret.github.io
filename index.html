@@ -12,55 +12,18 @@
     <link href="style/seekbar.css" rel="stylesheet" type="text/css"/>
     <script src="src/seekbar.js" type="text/javascript"></script></head>
 <body>
-<div class = "topbar">
+<div class = "topbar" onclick="show_help()">
     <img class = "image" src="./style/image/logo.svg" alt="logo">
 </div>
 <div class="bt">
 
-    <button id = "bt1" onclick = "list_all_50('http://webapi19sa-1.course.tamk.cloud/v1/weather')">
-    View 1
+    <button id = "bt1" onclick = "list_all_50('http://bweb17.course.tamk.cloud/api/get')">
+    View All
     </button>
 
-    <div class="dropdown">
-        <button id = "bt2" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature')">
-            View 2
-        </button>
-        <div class="dropdown-content">
-            <a href="#" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature')">Now</a>
-            <a href="#" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/23')">24 Hours</a>
-            <a href="#" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/47')">48 Hours</a>
-            <a href="#" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/71')">72 Hours</a>
-            <a href="#" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/167')">7 Days</a>
-            <a href="#" onclick = "list_temp('http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/709')">1 Month</a>
-        </div>
-    </div>
-
-    <div class="dropdown">
-        <button id = "bt3" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain')">
-            View 3
-        </button>
-        <div class="dropdown-content">
-            <a href="#" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain')">Now</a>
-            <a href="#" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain/23')">24 Hours</a>
-            <a href="#" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain/47')">48 Hours</a>
-            <a href="#" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain/71')">72 Hours</a>
-            <a href="#" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain/167')">7 Days</a>
-            <a href="#" onclick = "list_rain('http://webapi19sa-1.course.tamk.cloud/v1/weather/rain/709')">1 Month</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button id = "bt4" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',0)">
-            View 4
-        </button>
-        <div class="dropdown-content">
-            <a href="#" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',0)">Now</a>
-            <a href="#" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',23)">24 Hours</a>
-            <a href="#" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',47)">48 Hours</a>
-            <a href="#" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',71)">72 Hours</a>
-            <a href="#" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',167)">7 Days</a>
-            <a href="#" onclick = "list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather','light',709)">1 Month</a>
-        </div>
-    </div>
+    <button id = "bt4" onclick = "list_4('http://bweb17.course.tamk.cloud/api/get','vuoret_temperature',0)">
+        Optional
+    </button>
     <div class="dropdown" id="type"></div>
     <button id = "help" onclick = "show_help()">
         <img class = "help" src="./style/image/helpicon.svg" alt="logo">
@@ -73,9 +36,7 @@
     <div id="table"></div>
     
     <script src="./src/script.js"></script>
-    <script src="./src/view1.js"></script>
-    <script src="./src/view2.js"></script>
-    <script src="./src/view3.js"></script>
-    <script src="./src/view4.js"></script>
+    <script src="./src/viewall.js"></script>
+    <script src="./src/viewopt.js"></script>
 </body>
 </html>
